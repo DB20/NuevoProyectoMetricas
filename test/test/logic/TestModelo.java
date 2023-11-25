@@ -15,7 +15,7 @@ public class TestModelo<T> {
 	public void setUp1() {
 		modelo= new Modelo(CAPACIDAD);
 	}
-
+	@Before
 	public void setUp2() {
 		
 	}
