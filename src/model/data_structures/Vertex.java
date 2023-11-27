@@ -246,11 +246,13 @@ public class Vertex<K extends Comparable<K>,V  extends Comparable <V>> implement
 			Edge<K, V> actual=null;
 			try {
 				actual = inicio.edges().getElement(i);
+				if (actual != null) {
+					cola.insert(actual.getWeight(), actual);
+				}
 			} catch (PosException | VacioException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			cola.insert(actual.getWeight(), actual);
 		}
 	}
 	

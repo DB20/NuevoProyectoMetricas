@@ -99,9 +99,4 @@ public class HashMethods{
     }
     
 
-    // public static <K, V> void rehash(TablaHashLinearProbing<K, V> table) {
-    //     // ... (your existing rehash code)
-    // }
-    
-
 }

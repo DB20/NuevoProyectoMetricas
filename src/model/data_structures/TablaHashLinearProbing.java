@@ -183,7 +183,7 @@ public class TablaHashLinearProbing <K extends Comparable<K>, V extends Comparab
 	{
 		V valor=get(key);
 		boolean retornar=false;
-		if (!valor.equals(null))
+		if (!(valor==null))
 		{
 			retornar=true;
 		}

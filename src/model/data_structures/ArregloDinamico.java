@@ -432,10 +432,6 @@ public class ArregloDinamico<T extends Comparable<T>> implements ILista<T> {
 			{
 				 throw new PosException(ERROR_1);
 			}
-			else if (pos >tamanoMax)
-			{
-				 throw new PosException(ERROR_1);
-			}
 			else if (isEmpty())
 			{
 				throw new VacioException(ERROR_2);

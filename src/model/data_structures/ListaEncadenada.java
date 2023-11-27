@@ -232,14 +232,16 @@ public class ListaEncadenada <T extends Comparable <T>> implements ILista<T>{
 						actual=actual.getNext();
 					}
 					retorno=actual.getInfo();
-					anterior.disconnectNext(anterior);
+					if (anterior != null) {
+						anterior.disconnectNext(anterior);
+					}
 				}
+				
 				else 
 				{
-					Nodo<T> anterior=null;
-					
+								
 					retorno=actual.getInfo();
-					anterior.disconnectNext(anterior);
+					
 				}
 			}
 		}
