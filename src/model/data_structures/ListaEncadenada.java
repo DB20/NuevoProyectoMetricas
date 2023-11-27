@@ -3,10 +3,10 @@ package model.data_structures;
 import java.util.Comparator;
 
 public class ListaEncadenada <T extends Comparable <T>> implements ILista<T>{
-	private static final String Error_1 = "No es válido el elemento ingresado";
-	private static final String Error_2 = "La lista está vacía";  
-	private static final String Error_3 = "La posición no es válida";
-	private static final String Error_4 = "La cantidad de elementos no es válida";  
+	private static final String ERROR_1 = "No es válido el elemento ingresado";
+	private static final String ERROR_2 = "La lista está vacía";  
+	private static final String ERROR_3 = "La posición no es válida";
+	private static final String ERROR_4 = "La cantidad de elementos no es válida";  
 
 
 
@@ -56,7 +56,7 @@ public class ListaEncadenada <T extends Comparable <T>> implements ILista<T>{
 
 		 if (element==null)
 		 {
-			 throw new NullException(Error_1);
+			 throw new NullException(ERROR_1);
 		 }
 		 
 		else 
@@ -84,11 +84,11 @@ public class ListaEncadenada <T extends Comparable <T>> implements ILista<T>{
 		 
 		 if (pos<1 || pos-1 >size)
 		 {
-			 throw new PosException(Error_3);
+			 throw new PosException(ERROR_3);
 		 }
 		 else if (elemento==null)
 		 {
-			 throw new NullException(Error_1);
+			 throw new NullException(ERROR_1);
 		 }
 		 
 		 else
@@ -157,7 +157,7 @@ public class ListaEncadenada <T extends Comparable <T>> implements ILista<T>{
 		Nodo<T> ultimo=null;
 		if (isEmpty())
 		{
-			 throw new VacioException(Error_2);
+			 throw new VacioException(ERROR_2);
 		}
 		else if(first.getNext()!=null)
 		{
@@ -204,11 +204,11 @@ public class ListaEncadenada <T extends Comparable <T>> implements ILista<T>{
 		
 		 if (pos<1 || pos >size)
 		 {
-			 throw new PosException(Error_3);
+			 throw new PosException(ERROR_3);
 		 }
 		 else if (isEmpty())
 		 {
-			 throw new VacioException(Error_2);
+			 throw new VacioException(ERROR_2);
 		 }
 		 else
 		 {
@@ -253,7 +253,7 @@ public class ListaEncadenada <T extends Comparable <T>> implements ILista<T>{
 	{
 		if (isEmpty())
 		{
-			throw new VacioException(Error_2);
+			throw new VacioException(ERROR_2);
 		}
 		else
 		{
@@ -278,11 +278,11 @@ public class ListaEncadenada <T extends Comparable <T>> implements ILista<T>{
 	{
 		if (pos<1 || pos >size)
 		{
-			 throw new PosException(Error_3);
+			 throw new PosException(ERROR_3);
 		}
 		else if(isEmpty())
 		{
-			throw new VacioException(Error_2);
+			throw new VacioException(ERROR_2);
 		}
 		else
 		{
@@ -311,11 +311,11 @@ public class ListaEncadenada <T extends Comparable <T>> implements ILista<T>{
 		int pos =-1;
 		if (element ==null)
 		{
-			throw new NullException(Error_1);
+			throw new NullException(ERROR_1);
 		}
 		else if (isEmpty())
 		{
-			throw new VacioException(Error_2);
+			throw new VacioException(ERROR_2);
 		}
 		else
 		{
@@ -337,11 +337,11 @@ public class ListaEncadenada <T extends Comparable <T>> implements ILista<T>{
 	{
 		 if (pos1>size|| pos2>size || pos1<1 || pos2<1)
 		 {
-			 throw new PosException(Error_3);
+			 throw new PosException(ERROR_3);
 		 }
 		 else if(isEmpty())
 		 {
-			 throw new VacioException(Error_2);
+			 throw new VacioException(ERROR_2);
 		 }
 		 else if ( pos1!=pos2 && size>1)
 		{
@@ -371,15 +371,15 @@ public class ListaEncadenada <T extends Comparable <T>> implements ILista<T>{
 	{
 		if (pos<1 || pos >size)
 		{
-			 throw new PosException(Error_3);
+			 throw new PosException(ERROR_3);
 		}
 		else if (isEmpty())
 		{
-			throw new VacioException(Error_2);
+			throw new VacioException(ERROR_2);
 		}
 		else if(element==null)
 		{
-			throw new NullException(Error_1);
+			throw new NullException(ERROR_1);
 		}
 		else
 		{
@@ -399,11 +399,11 @@ public class ListaEncadenada <T extends Comparable <T>> implements ILista<T>{
 	{
 		if (isEmpty())
 		{
-			throw new VacioException(Error_2);
+			throw new VacioException(ERROR_2);
 		}
 		else if (numElementos<0)
 		{
-			throw new PosException(Error_4);
+			throw new PosException(ERROR_4);
 		}
 		else if (numElementos >= size())
 		{
